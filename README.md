@@ -1,2 +1,96 @@
-# mpl_id_skrep
-Scrape the mpl id website.
+# MPL_ID SCRAPE API Documentation
+
+
+### 1. Get Player Information
+
+**Endpoint:** `/players/{player_id}`
+
+**Method:** GET
+
+**Description:** Retrieve information about a specific player on the MPL_ID platform.
+
+**Parameters:**
+
+- `{player_id}` (string): The unique identifier of the player.
+
+**Example Request:**
+
+```markdown
+GET players/12345
+```
+
+**Example Response:**
+
+```output
+{
+    "player_id": "12345",
+    "player_name": "AlokHamil",
+    "player_rank": 5,
+    "games_played": 100,
+    "win_percentage": 75.5,
+    "team_id": "54321"
+}
+```
+
+### 2. Get Tournament Details
+
+**Endpoint:** `/tournaments/{tournament_id}`
+
+**Method:** GET
+
+**Description:** Retrieve details about a specific tournament on the MPL_ID platform.
+
+**Parameters:**
+
+- `{tournament_id}` (string): The unique identifier of the tournament.
+
+**Example Request:**
+
+```markdown
+GET tournaments/67890
+```
+
+**Example Response:**
+
+```output
+{
+    "tournament_id": "67890",
+    "tournament_name": "MPL Championship 2023",
+    "start_date": "2023-10-28",
+    "end_date": "2023-10-29",
+    "prize_pool": "$100,000",
+    "location": "Online",
+    "participants": 32
+}
+```
+
+### 3. Get Game Stats
+
+**Endpoint:** `/games/{game_id}/stats`
+
+**Method:** GET
+
+**Description:** Retrieve statistics for a specific game played on the MPL_ID platform.
+
+**Parameters:**
+
+- `{game_id}` (string): The unique identifier of the game.
+
+**Example Request:**
+
+```markdown
+GET games/54321/stats
+```
+
+**Example Response:**
+
+```output
+{
+    "game_id": "54321",
+    "game_name": "Battle Royale",
+    "total_matches_played": 500,
+    "average_kills": 7.2,
+    "average_placement": 3,
+    "top_10_percentage": 65.5
+}
+```
